@@ -298,43 +298,61 @@ footer p.copyright {
   margin: 50px auto;
   background-color: #28a745;
   padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   color: white;
+  font-family: 'Arial', sans-serif;
 }
 
 .h2form {
-  text-align: left;
+  text-align: center;
   margin-bottom: 20px;
-  font-size: 20px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.form-group {
+  margin-bottom: 15px;
 }
 
 form label {
   display: block;
   margin-bottom: 5px;
+  font-weight: bold;
 }
 
 form input[type="text"],
 form input[type="email"],
 form input[type="tel"],
+form input[type="number"],
+form input[type="file"],
 form textarea,
 form select {
   width: 100%;
   padding: 10px;
-  margin-bottom: 10px;
+  margin-top: 5px;
   border: 1px solid #ccc;
-  border-radius: 3px;
+  border-radius: 5px;
   box-sizing: border-box;
+  font-size: 16px;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+form input[type="checkbox"] {
+  margin-right: 10px;
 }
 
 form button {
   width: 100%;
-  padding: 10px;
+  padding: 12px;
   background-color: #40d369;
   color: #fff;
   border: none;
-  border-radius: 3px;
+  border-radius: 5px;
+  font-size: 16px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 form button:hover {
@@ -343,18 +361,17 @@ form button:hover {
 
 .error {
   text-align: center;
-  color: rgb(212, 92, 11);
-  font-size: 24px;
-}
-
-.buttonform {
-  color: black;
+  color: #d45c0b;
+  font-size: 16px;
+  margin-top: 10px;
 }
 
 select {
-  color: white;
-  background-color: #0f723c;
+  color: #333;
+  background-color: #f9f9f9;
 }
+
+
 /* Media Queries hasta seccion Testimonios */
 
 @media (max-width: 600px) {
