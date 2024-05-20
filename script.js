@@ -2,10 +2,9 @@ const cursos = document.querySelectorAll(".curso");
 cursos.forEach((c) => {
   const boton = c.querySelector(".boton-curso");
   boton.addEventListener("click", () => {
-    c.toggleAttribute("active");
+    c.toggleAttribute("activo");
   });
 });
-
 
 function validateForm() {
   let nombre = document.getElementById("nombre").value;
@@ -18,31 +17,30 @@ function validateForm() {
   let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
   if (nombre.trim() == "") {
-      errorDiv.innerHTML = "Por favor, ingrese su nombre.";
-      return false;
+    errorDiv.innerHTML = "Por favor, ingrese su nombre.";
+    return false;
   }
 
   if (!emailRegex.test(email)) {
-      errorDiv.innerHTML = "Por favor, ingrese un correo electrónico válido.";
-      return false;
+    errorDiv.innerHTML = "Por favor, ingrese un correo electrónico válido.";
+    return false;
   }
 
   if (telefono.trim() == "") {
-      errorDiv.innerHTML = "Por favor, ingrese su teléfono.";
-      return false;
+    errorDiv.innerHTML = "Por favor, ingrese su teléfono.";
+    return false;
   }
 
   if (isNaN(edad) || edad < 18) {
-      errorDiv.innerHTML = "Por favor, ingrese una edad válida (mayor a 13).";
-      return false;
+    errorDiv.innerHTML = "Por favor, ingrese una edad válida (mayor a 13).";
+    return false;
   }
 
-  
   if (cursos == "") {
-      errorDiv.innerHTML = "Por favor, seleccione un curso.";
-      return false;
+    errorDiv.innerHTML = "Por favor, seleccione un curso.";
+    return false;
   }
 
-  errorDiv.innerHTML = ""; 
+  errorDiv.innerHTML = "";
   return true;
 }
